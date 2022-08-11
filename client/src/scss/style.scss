@@ -1,0 +1,328 @@
+@import "./plugins/vars.scss";
+@import "./plugins/family.scss";
+@import "./plugins/reponsive.scss";
+
+body{
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    background: conic-gradient(#F06292  0deg 75deg, #E55C8A 75deg 255deg, #F06292 255deg 360deg);
+    font-family: 'Inter';
+    font-weight: 400;
+    background-attachment: fixed;
+}
+
+.mainDiv{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .todoFon{
+        width: 40%;
+        background-color: #3C424A;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5%;
+        @media screen and(min-width: 1001px) and (max-width: 1440px) {
+            width: 50%;
+        }
+        @media screen and(min-width: 769px) and (max-width: 1000px) {
+            width: 60%;
+            margin-top: 10%;
+        }
+        @media screen and(min-width: 469px) and (max-width: 768px) {
+            width: 80%;
+            margin-top: 10%;
+        }
+        @media screen and(min-width: 250px) and (max-width: 468px) {
+            width: 94%;
+            margin-top: 10%;
+        }
+        @media screen and(min-width: 2201px) and (max-width: 2560px) {
+            width: 35%;
+            margin-top: 7%;
+         }
+        .navBar{
+            width: 100%;
+            height: 50px;
+            border-bottom: 2px solid #343940;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            @media screen and(min-width: 2001px) and (max-width: 2560px) {
+                height: 70px;
+            }
+            div{
+                padding: 0px 25px;
+                height: 99%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color:white;
+                cursor: pointer;
+                transition: 0.2s linear;
+                margin-left: 10px;
+                @media screen and(min-width: 469px) and (max-width: 600px) {
+                    padding: 0 15px;
+                    font-size: 14px;
+                }
+                @media screen and(min-width: 250px) and (max-width: 468px) {
+                    padding: 0 10px;
+                    font-size: 12px;
+                }
+                @media screen and(min-width: 1800px) and (max-width: 2000px) {
+                    padding:0 30px;
+                    font-size: 17px;
+                }
+                @media screen and(min-width: 2001px) and (max-width: 2560px) {
+                    padding:0 35px;
+                    font-size: 20px;
+                }
+                &:hover{
+                    border-bottom: 2px solid #E55C8A;
+                    transition: 0.2s linear;
+                }
+            }
+            .borderNav{
+                border-bottom: 2px solid #E55C8A;
+            }
+        }
+        .dateBlock{
+            width: 100%;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            opacity: 0.7;
+            @media screen and(min-width: 469px) and (max-width: 768px) {
+                height: 130px;
+                h1{
+                    font-size: 25px;
+                }
+            }
+            @media screen and(min-width: 250px) and (max-width: 468px) {
+                height: 100px;
+                h1{
+                    font-size: 20px;
+                }
+            }
+            @media screen and(min-width: 2001px) and (max-width: 2560px) {
+                height: 240px;
+                h1{
+                    font-size: 40px;
+                }
+            }
+        }
+        .todoBlock{
+            width: 85%;
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            .blockInput, form{
+                width: 100%;
+                height: 50px;
+                @media screen and(min-width: 2001px) and (max-width: 2560px) {
+                    height: 70px;
+                }
+                input{
+                    width: 89%;
+                    height: 80%;
+                    border: 2px solid #2F343A;
+                    outline: none;
+                    color: #a8a8a1;
+                    background-color: #343A40;
+                    border-radius: 5px;
+                    padding-left: 10%;
+                    @media screen and(min-width: 2001px) and (max-width: 2560px) {
+                        font-size: 18px;
+                    }
+                    @media screen and(min-width: 1800px) and (max-width: 2000px) {
+                        padding-left: 8%;
+                        width: 91%;
+                    }
+                    @media screen and(min-width: 469px) and (max-width: 550px) {
+                        padding-left: 13%;
+                    }
+                    @media screen and(min-width: 350px) and (max-width: 468px) {
+                        padding-left: 11%;
+                    }
+                    @media screen and(min-width: 50px) and (max-width: 349px) {
+                        padding-left: 15%;
+                    }
+                }
+                .iconInput{
+                    position: absolute;
+                    font-size: 18px;
+                    color: white;
+                    opacity: 0.5;
+                    padding: 14px;
+                    @media screen and(min-width: 2001px) and (max-width: 2560px) {
+                        padding: 20px;
+                        font-size: 22px;
+                    }
+                }
+            }
+            .blockItems{
+                width: 100%;
+                min-height: 10px;
+                display: flex;
+                flex-direction: column;
+                padding-top: 15px;
+                padding-bottom: 30px;
+                .pinBlock{
+                    width: 100%;
+                    border-bottom: 2px solid #373C43;
+                    padding-bottom: 20px;
+                    padding-top: 15px;
+                    margin-bottom: 20px;
+                }
+                
+                .listItem{
+                    width: 100%;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    @media screen and(min-width: 2001px) and (max-width: 2560px) {
+                        height: 60px;
+                    }
+                    form{
+                        display: flex;
+                        align-items: center;
+                        margin-left: 3%;
+                        #updateText{
+                            height: 55%;
+                            padding-left: 5%;
+                            border: 1px solid #2F343A;
+                            border-radius: 3px;
+                        }
+                    }
+                    .checkbox{
+                        background-color: #484F59;
+                        width: 20px;
+                        height: 20px;
+                        border: 1px solid black;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        @media screen and(min-width: 2001px) and (max-width: 2560px) {
+                           width: 30px;
+                           height: 30px;
+                        }
+                        img{
+                            width: 140%;
+                        }
+                    }
+                    .text{
+                        width: 80%;
+                        margin-left: 2%;
+                        color: white;
+                        opacity: 0.9;
+                        letter-spacing: 0.5px;
+                        word-break: break-all;
+                        font-size: 15px;
+                        @media screen and(min-width: 469px) and (max-width: 768px) {
+                           font-size: 13px;
+                        }
+                        @media screen and(min-width: 250px) and (max-width: 468px) {
+                            font-size: 13px;
+                        }
+                        @media screen and(min-width: 2001px) and (max-width: 2560px) {
+                            font-size: 20px;
+                        }
+                    }
+                    .more{
+                        width: 15%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        div{
+                            height: 7px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                        }
+                        svg{
+                            font-size: 25px;
+                            color: white;
+                            opacity: 0.6;
+                        }
+                    }
+                }
+            }
+            .listMore{
+                width: 100%;
+                height: 100px;
+                display: flex;
+                justify-content: end;
+                @media screen and(min-width: 2001px) and (max-width: 2560px) {
+                    height: 130px;
+                }
+                .moreBlock{
+                    width: 140px;
+                    height: 100%;
+                    background-color: #484F59;
+                    border: 1px solid #40454E;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 5px 0px;
+                    justify-content: center;
+                    @media screen and(min-width: 2001px) and (max-width: 2560px) {
+                        width: 170px;
+                     }
+                    div{
+                        width: 80%;
+                        height: 30px;
+                        margin-left: 10%;
+                        display: flex;
+                        align-items: center;
+                        svg{
+                            color: white;
+                            opacity: 0.7;
+                            font-size: 14px;
+                            width: 10px;
+                            @media screen and(min-width: 2001px) and (max-width: 2560px) {
+                                font-size: 17px;
+                                width: 15px;
+                            }
+                        }
+                        p{
+                            font-size: 12px;
+                            color: white;
+                            opacity: 0.7;
+                            margin-left: 10px;
+                            cursor: pointer;
+                            @media screen and(min-width: 2001px) and (max-width: 2560px) {
+                                font-size: 15px;
+                             }
+                        }
+                    }
+                    div:nth-child(1){
+                        svg{
+                            transform: rotate(-35deg);
+                        }
+                    }
+                    div:nth-child(2){
+                        svg{
+                            font-size: 11px;
+                            @media screen and(min-width: 2001px) and (max-width: 2560px) {
+                                font-size: 14px;
+                             }
+                            transform: rotate(-15deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
