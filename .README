@@ -1,0 +1,7 @@
+# ToDoList
+
+1. Բացել երկու տեռմինալ այս պապկայի մեջ
+2. Առաջին տեռմինալի մեջ գրել cd client հետո npm run start
+3. Երկրորդ տեռմինալի մեջ գրել cd backend հետո npm run start
+
+--և google-ում ավտոմատ կբացվի http://localhost:8080/ կայքը--
